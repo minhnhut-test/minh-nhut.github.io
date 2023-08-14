@@ -4,7 +4,6 @@
     --backgroud-color: linear-gradient(134deg, #35A29F 0%, #0B666A 100%);
     --button-color: #35A29F;
     --frame-color: #0B666A;
-    --switch-color: #35A29F;
     font-size: 16px;
 }
 body{
@@ -54,14 +53,21 @@ body{
     display: block;
     width: 100%;
 }
+.home main{
+    z-index: 100;
+}
 .home .vector_header{
+    position: relative;
     width: 100%;
+    z-index: 100;
 }
 .home .img_header{
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+    position: relative;
+    z-index: 100;
 }
 .home .img_header img{
     width: 78%;
@@ -113,6 +119,7 @@ body{
     align-items: center;
     grid-template-columns: repeat(12,1fr);
     justify-content: center;
+    margin-bottom: 3rem;
 }
 .home .container .infor_header p{
     width: 6.1rem;
@@ -133,8 +140,132 @@ body{
     font-size: 1.9rem;
     color: #ffffffc7;
 }
+.home .vector-deco1{
+    position: absolute;
+    top:2rem;
+    right:0;
+    z-index: 1;
+    width: 7.125rem;
+    height: 29rem;
+}
+.home .vector-deco2{
+    position: absolute;
+    top:27rem;
+    left: 0;
+    z-index: 1;
+    width: 14.25rem;
+    height: 14.4375rem;
+}
 @media screen and (max-width: 350px){
     :root{
         font-size: 14px;
     }
+}
+
+
+/* About */
+
+.about{
+    width:100%;
+    display: block;
+}
+.about .about_head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.about .about_head .head_contain{
+    position: relative;
+   
+}
+.about .about_head .head_contain img{
+    position: relative;
+    z-index: 1000;
+    width: 11.625rem;
+    height: 16.3125rem;
+}
+.about .about_head .head_contain .background_ava{
+    position: absolute;
+    z-index: 1;
+    left: -18%;
+    bottom: -20%;
+    width: 16.76413rem;
+    height: 11.53094rem;
+}
+.about .about_head .head_contain  .about_head_rating{
+    position: absolute;
+    width: 10.125rem;
+    height: 3.5625rem;
+    border-radius: 0.625rem;
+    background: #0B666A;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    bottom: -2rem;
+    left:1.8rem;
+}
+.about .about_head_rating svg{
+   fill: #EED682;
+}
+
+.about .about_logo{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin-top: 2.4rem;
+}
+.about .about_logo .logo_header_contain{
+    position: relative;
+    grid-column-start: 6;
+}
+.about .about_logo .logo_header_contain h1{
+    font-size: 5.25rem;
+    margin: 0%;
+    color: #FFFFFF;
+    opacity: 20%;
+    margin-top: 1rem;
+    font-weight: 900;
+    margin-bottom: -2.78rem;
+}
+.about .about_logo .logo_header_contain span{
+    font-size: 1.3125rem;
+    font-weight: 800;
+    color: #fff;
+    padding-left: 2rem;
+}
+.about .about_contain{
+    display:grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding-top: 1.31rem;
+}
+.about .about_contain p{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 20.25rem;
+    font-size: 0.93rem;
+    font-weight: 300;
+    line-height: 127.523%; /* 1.03613rem */
+    letter-spacing: 0.02031rem;
+    color:#ffffffb1;
+    font-size: 0.93rem;
+}
+.about .about_button{
+    display:grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding-top: 0.81rem;
+    padding-bottom: 2.31rem;
+}
+.about .about_button button{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 20.25rem;
+    height: 2.6875rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 0.93rem;
+    font-family: "Poppins";
+    font-weight:500;
+    background: var(--button-color);
+    color: #fff;
 }
