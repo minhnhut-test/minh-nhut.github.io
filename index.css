@@ -5,18 +5,22 @@
     --button-color: #35A29F;
     --frame-color: #0B666A;
     --switch-color: #35A29F;
+    font-size: 16px;
 }
 body{
     width: 100%;
     padding: 0%;
     margin: 0%;
     background: var(--backgroud-color);
+    font-family: 'Poppins';
+    overflow-x: hidden;
 }
 .navagation{
     width: 100%;
     position: fixed;
     z-index: 1000;
-    display: grid;
+    /* display: grid; */
+    display: none;
     grid-template-columns: repeat(12,1fr);
     bottom: 0%;
     background: var(--frame-color);
@@ -46,3 +50,91 @@ body{
     grid-column-start: 11;
 }
 
+.home{
+    display: block;
+    width: 100%;
+}
+.home .vector_header{
+    width: 100%;
+}
+.home .img_header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.home .img_header img{
+    width: 78%;
+}
+.home .container{
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 2rem;
+}
+.home .container .logo_header{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.home .container .logo_header_contain{
+    position: relative;
+    grid-column-start: 4;
+}
+.home .container .logo_header_contain h1{
+    font-size: 5.25rem;
+    margin: 0%;
+    color: #FFFFFF;
+    opacity: 20%;
+    margin-top: 1rem;
+    font-weight: 900;
+    margin-bottom: -2.9rem;
+}
+.home .container .logo_header_contain span{
+    font-size: 1.3125rem;
+    font-weight: 800;
+    color: #fff;
+    padding-left: 0.2rem;
+}
+.home .container .content_header{
+    width: 87%;
+    display: flex;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+.home .container .content_header p{
+    color:#ffffffb1;
+    font-size: 0.93rem;
+    margin-right: 1.9rem;
+}
+
+.home .container .infor_header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(12,1fr);
+    justify-content: center;
+}
+.home .container .infor_header p{
+    width: 6.1rem;
+    height: 1.125rem;
+    color: #ffffffbc;
+    font-weight: 600;
+    font-size: 0.8rem;
+    
+}
+.home .container .infor_header .infor_icon{
+    grid-column-start: 7;
+    margin-left: 0.3rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.4rem;
+} 
+.home .container .infor_header .infor_icon i{
+    font-size: 1.9rem;
+    color: #ffffffc7;
+}
+@media screen and (max-width: 350px){
+    :root{
+        font-size: 14px;
+    }
+}
